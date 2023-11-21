@@ -1,6 +1,14 @@
 NAME = libftprintf.a
 
-SRC = ft_printf.c
+SRC = ft_printf.c \
+		ft_printf_utils.c \
+		./format/print_char.c \
+		./format/print_lhex.c \
+		./format/print_uhex.c \
+		./format/print_nbr.c \
+		./format/print_unbr.c \
+		./format/print_pointer.c \
+		./format/print_str.c \
 
 SRCB = 
 
@@ -14,7 +22,7 @@ ARC = ar rcs
 
 CC = cc
 
-INCLUDE = libftprintf.h
+INCLUDE = ft_printf.h
 
 .c.o:
 		$(CC) $(FLAGS) -c $< -o ${<:.c=.o} -I $(INCLUDE)
